@@ -1,0 +1,51 @@
+[package]
+name = "devtool-manager"
+version = "0.1.0"
+description = "开发者工具管家 - 管理您的 CLI 工具和配置文件"
+authors = ["you"]
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+# The `_lib` suffix may seem redundant but it is necessary
+# to make the lib name unique and wouldn't conflict with the bin name.
+# This seems to be only an issue on Windows, see https://github.com/rust-lang/cargo/issues/8519
+name = "devtool_manager_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = [] }
+tauri-plugin-opener = "2"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+
+# 异步运行时
+tokio = { version = "1", features = ["full"] }
+
+# 文件系统操作
+walkdir = "2"
+dirs = "5"
+
+# 进程执行
+which = "6"
+
+# 时间处理
+chrono = { version = "0.4", features = ["serde"] }
+
+# 错误处理
+thiserror = "1"
+anyhow = "1"
+
+# TOML 解析 (用于 cargo)
+toml = "0.8"
+
+# 系统信息 (用于端口管理、进程监控)
+sysinfo = "0.30"
+
+# HTTP 客户端 (用于包搜索)
+reqwest = { version = "0.11", features = ["json"] }
+
