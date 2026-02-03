@@ -120,6 +120,9 @@ export default function SystemClean() {
     'yarn 缓存': 'clear_yarn_cache',
     'cargo 缓存': 'clear_cargo_cache',
     'pip 缓存': 'clear_pip_cache',
+    'Gradle 缓存': 'clear_gradle_cache',
+    'Maven 缓存': 'clear_maven_cache',
+    'Go 缓存': 'clear_go_cache',
   };
 
   // 确认清理
@@ -216,7 +219,7 @@ export default function SystemClean() {
       {/* 缓存列表 */}
       <Row gutter={[16, 16]}>
         {caches.map((cache) => (
-          <Col span={8} key={cache.name}>
+          <Col xs={24} sm={12} lg={8} xl={6} key={cache.name}>
             <CacheCard
               cache={cache}
               totalSize={totalSize}

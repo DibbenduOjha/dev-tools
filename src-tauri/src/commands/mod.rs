@@ -12,6 +12,7 @@ pub mod proxy;
 pub mod env;
 pub mod process;
 pub mod template;
+pub mod updater;
 
 pub use scan::*;
 pub use manage::*;
@@ -26,3 +27,4 @@ pub use proxy::*;
 pub use env::*;
 pub use process::*;
 pub use template::*;
+pub use updater::*;

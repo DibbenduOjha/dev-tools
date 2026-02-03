@@ -145,7 +145,7 @@ export default function VersionManager() {
       ) : (
         <Row gutter={[16, 16]}>
           {versions.map((rt) => (
-            <Col span={8} key={rt.name}>
+            <Col xs={24} sm={12} lg={8} key={rt.name}>
               <VersionCard runtime={rt} color={getColor(rt.name)} />
             </Col>
           ))}

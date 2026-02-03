@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import { ConfigProvider, theme } from "antd";
 import zhCN from "antd/locale/zh_CN";
 import App from "./App";
+import UpdateChecker from "./components/UpdateChecker";
 import "./styles/global.css";
 
 // 统一的主题色
@@ -55,6 +56,7 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
       }}
     >
       <App />
+      <UpdateChecker />
     </ConfigProvider>
   </React.StrictMode>,
 );

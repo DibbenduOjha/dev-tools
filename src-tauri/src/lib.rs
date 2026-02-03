@@ -13,7 +13,7 @@ use commands::{
     install_npm_package, install_cargo_package, install_pip_package,
     get_npm_versions, install_npm_version,
     scan_caches, clear_npm_cache, clear_pnpm_cache, clear_yarn_cache,
-    clear_cargo_cache, clear_pip_cache,
+    clear_cargo_cache, clear_pip_cache, clear_gradle_cache, clear_maven_cache, clear_go_cache,
     scan_ports, kill_process,
     get_runtime_versions,
     scan_disk_usage, get_dir_details,
@@ -21,13 +21,15 @@ use commands::{
     get_proxy_configs, set_proxy_config,
     get_env_variables, get_path_entries,
     scan_dev_processes,
-    get_project_templates, create_project
+    get_project_templates, create_project,
+    check_for_updates, download_and_install_update
 };
 
 #[cfg_attr(mobile, tauri::mobile_entry_point)]
 pub fn run() {
     tauri::Builder::default()
         .plugin(tauri_plugin_opener::init())
+        .plugin(tauri_plugin_updater::Builder::new().build())
         .invoke_handler(tauri::generate_handler![
             scan_npm,
             scan_cargo,
@@ -56,6 +58,9 @@ pub fn run() {
             clear_yarn_cache,
             clear_cargo_cache,
             clear_pip_cache,
+            clear_gradle_cache,
+            clear_maven_cache,
+            clear_go_cache,
             scan_ports,
             kill_process,
             get_runtime_versions,
@@ -68,7 +73,9 @@ pub fn run() {
             get_path_entries,
             scan_dev_processes,
             get_project_templates,
-            create_project
+            create_project,
+            check_for_updates,
+            download_and_install_update
         ])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
