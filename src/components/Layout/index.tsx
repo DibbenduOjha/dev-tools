@@ -1,5 +1,7 @@
+import { useState, useEffect } from 'react';
 import { Outlet, useNavigate, useLocation } from 'react-router-dom';
 import { Layout, Menu, Typography } from 'antd';
+import { getVersion } from '@tauri-apps/api/app';
 import {
   HomeOutlined,
   AppstoreOutlined,
@@ -84,6 +86,12 @@ export default function AppLayout() {
   const navigate = useNavigate();
   const location = useLocation();
   const { siderCollapsed, setSiderCollapsed } = useAppStore();
+  const [version, setVersion] = useState('');
+
+  // 获取版本号
+  useEffect(() => {
+    getVersion().then(setVersion).catch(() => setVersion('0.0.0'));
+  }, []);
 
   // 处理菜单点击
   const handleMenuClick = ({ key }: { key: string }) => {
@@ -243,7 +251,7 @@ export default function AppLayout() {
 
           {/* 版本号 */}
           <div style={{ color: 'rgba(255, 255, 255, 0.5)', fontSize: 12 }}>
-            v0.1.0
+            v{version}
           </div>
         </Header>
 

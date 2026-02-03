@@ -100,7 +100,7 @@ export default function Dashboard() {
       {/* Info Cards */}
       <Row gutter={[16, 16]} style={{ marginTop: 24 }}>
         <Col xs={24} md={12}>
-          <div className="glass" style={{ padding: 24 }}>
+          <div className="glass" style={{ padding: 24, height: '100%' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 16 }}>
               <span style={{ fontSize: 28 }}>📊</span>
               <Title level={4} style={{ margin: 0, color: '#fff' }}>工具统计</Title>
@@ -113,7 +113,7 @@ export default function Dashboard() {
           </div>
         </Col>
         <Col xs={24} md={12}>
-          <div className="glass" style={{ padding: 24 }}>
+          <div className="glass" style={{ padding: 24, height: '100%' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 16 }}>
               <span style={{ fontSize: 28 }}>⚡</span>
               <Title level={4} style={{ margin: 0, color: '#fff' }}>功能说明</Title>
