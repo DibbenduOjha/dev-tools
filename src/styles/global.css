@@ -360,6 +360,7 @@ body {
 .stat-card .info .label {
   font-size: 14px;
   color: rgba(255, 255, 255, 0.6);
+  white-space: nowrap;
 }
 
 /* 霓虹发光效果 */
