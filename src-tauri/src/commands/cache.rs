@@ -15,7 +15,7 @@ pub struct CacheInfo {
 
 /// 获取扩展的 PATH 环境变量
 fn get_extended_path_env() -> Vec<(String, String)> {
-    let path = std::env::var("PATH").unwrap_or_default();
+    let mut path = std::env::var("PATH").unwrap_or_default();
 
     #[cfg(target_os = "macos")]
     {

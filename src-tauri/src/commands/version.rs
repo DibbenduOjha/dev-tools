@@ -14,7 +14,7 @@ pub struct RuntimeVersion {
 
 /// 获取扩展的 PATH 环境变量
 fn get_extended_path() -> String {
-    let paths = std::env::var("PATH").unwrap_or_default();
+    let mut paths = std::env::var("PATH").unwrap_or_default();
 
     #[cfg(target_os = "macos")]
     {
